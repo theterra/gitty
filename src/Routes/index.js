@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import UserDetails from "Screens/UserDetails";
+import UserDetails from "Pages/UserDetails";
 
 const ReactRoutes = () => {
   return (

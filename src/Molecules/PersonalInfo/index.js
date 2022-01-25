@@ -1,5 +1,6 @@
 import { Avatar, Box, Heading, Stack, Text } from "@chakra-ui/react";
 import { FiUsers } from "react-icons/fi";
+import ListItem from "Atoms/ListItem";
 
 const PersonalInfo = ({
   avatarUrl,
@@ -29,27 +30,13 @@ const PersonalInfo = ({
           <Text mt="4">{bio}</Text>
 
           <Stack direction="row" alignItems="center" mt="6">
-            <Stack
-              direction="row"
-              spacing="1"
-              alignItems="center"
-              _after={{
-                content: '"∙"',
-                fontSize: "1.2rem",
-                fontFamily: "cursive",
-                lineHeight: "0",
-                padding: "0px 4px",
-              }}
-            >
-              <Box as={FiUsers} size="1em" color="gray.900" />
-              <Text fontWeight="bold">{followers}</Text>
-              <Text color="gray.500">Followers</Text>
-            </Stack>
-
-            <Stack direction="row" spacing="1" alignItems="center">
-              <Text fontWeight="bold">{following}</Text>
-              <Text color="gray.500">Following</Text>
-            </Stack>
+            <ListItem icons={FiUsers} label="Followers" value={followers} />
+            <ListItem
+              icon={FiUsers}
+              label="Following"
+              value={following}
+              isLast
+            />
           </Stack>
         </Box>
       </Stack>
