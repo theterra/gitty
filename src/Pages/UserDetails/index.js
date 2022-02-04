@@ -29,8 +29,6 @@ function UserDetails() {
     openIssues,
   } = useUserDetails();
 
-  console.log(forkedRepos);
-
   return (
     <Box>
       <Header

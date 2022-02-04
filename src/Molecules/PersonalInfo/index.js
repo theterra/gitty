@@ -11,7 +11,7 @@ const PersonalInfo = ({
   following,
 }) => {
   return (
-    <Box padding="2" borderRadius="sm">
+    <Box padding="2" borderRadius="sm" data-testid="user-information">
       <Stack spzacing="2rem">
         <Avatar
           src={avatarUrl}
@@ -19,12 +19,13 @@ const PersonalInfo = ({
           alignSelf="center"
           showBorder
           borderColor="gray.50"
+          data-testid="user-avatar"
         />
         <Box>
-          <Heading as="h5" fontSize="1.5rem">
+          <Heading as="h5" fontSize="1.5rem" data-testid="user-fullname">
             {fullname}
           </Heading>
-          <Text color="gray.500" fontSize="lg">
+          <Text color="gray.500" fontSize="lg" data-testid="user-id">
             {userid}
           </Text>
           <Text mt="4">{bio}</Text>

@@ -13,6 +13,7 @@ const SearchInput = ({ searchValue, onSearchChange }) => {
         value={searchValue}
         onChange={onSearchChange}
         boxShadow="sm"
+        data-testid="search-input"
       />
     </InputGroup>
   );

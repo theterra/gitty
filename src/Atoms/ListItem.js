@@ -17,10 +17,17 @@ const ListItem = ({ value, label, icon, isLast = false }) => {
             }
           : undefined
       }
+      data-testid="list-item"
     >
-      {icon && <Box as={icon} size="1em" color="gray.900" />}
-      <Text fontWeight="bold">{value}</Text>
-      <Text color="gray.500">{label}</Text>
+      {icon && (
+        <Box as={icon} size="1em" color="gray.900" data-testid="item-icon" />
+      )}
+      <Text fontWeight="bold" data-testid="item-value">
+        {value}
+      </Text>
+      <Text color="gray.500" data-testid="item-label">
+        {label}
+      </Text>
     </Stack>
   );
 };

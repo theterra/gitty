@@ -8,7 +8,7 @@ export const useUserDetails = () => {
   const [userRepos, setUserRepos] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchValue, setSearchValue] = useState(searchParams.get("userId"));
+  const [searchValue, setSearchValue] = useState(searchParams.get("userId") || "");
   const userId = searchParams.get("userId");
 
   useEffect(() => {
